@@ -8,7 +8,6 @@ function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // You can add your login logic here, e.g., send the data to a server or check against a predefined username and password.
 
     console.log('Submitted:', { username, password });
   };
@@ -16,7 +15,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-form">
-        <h2>Login</h2>
+        <h2>Welcome Back!</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
@@ -27,6 +26,7 @@ function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
+              placeholder='you@example.com'
             />
           </div>
           <div className="form-group">
@@ -38,6 +38,7 @@ function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              placeholder='Enter 6 character or more'
             />
           </div>
           <button type="submit">Login</button>
